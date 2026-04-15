@@ -42,9 +42,13 @@ function createGrid() {
     squares.forEach((cell) => {
     cell.style.width = `${squareWidth}px`;
     cell.style.height = `${squareWidth}px`;
+    let opacity = 0.1;
+
 
     cell.addEventListener("mouseover", () => {
         cell.style.backgroundColor = "red";
+        cell.style.opacity = String(opacity)
+        opacity += 0.1;
     })
     })
 }
